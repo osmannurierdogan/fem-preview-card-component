@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap');
+
+:root {
+	--lexend-deca-font-family: 'Lexend Deca', sans-serif;
+	--big-shoulders-display-font-family: 'Big Shoulders Display', cursive;
+	--mobile-screen-breakpoint: 375px;
+	--desktop-screen-breakpoint: 1440px;
+	--bright-orange-color: hsl(31, 77%, 52%);
+	--dark-cyan-color: hsl(184, 100%, 22%);
+	--very-dark-cyan-color: hsl(179, 100%, 13%);
+	--attribution-color: hsl(228, 45%, 44%);
+	--transparent-paragraph-color: hsla(0, 0%, 100%, 0.75);
+	--light-gray-button-background-heading-color: hsl(0, 0%, 95%);
+	--font-size: 15px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.card-container{
+  margin: 12% 18%;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+.card{
+  padding: 3rem;
+  width: 31rem;
+  height: 31rem;
+  max-width: 31rem;
+}
+.card.sedans{
+  background-color: var(--bright-orange-color);
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  border-radius: 10px 0 0 10px;
+}
+.card.suvs{
+  background-color: var(--dark-cyan-color);
+}
+.card.luxury{
+  background-color: var(--very-dark-cyan-color);
+  /* border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  border-radius: 0 10px 10px 0;
+}
+@media (max-width: 375px) {
+  .card-container{
+    flex-direction: column;
+  }
+}
+.card-title{
+  margin: 2rem auto;
+  font-family: var(--big-shoulders-display-font-family);
+  font-size: calc(var(--font-size) * 2.5);
+  color: var(--light-gray-button-background-heading-color);
+}
+.card-detail{
+  color: var(--transparent-paragraph-color);
+  font-size: calc(var(--font-size));
+  font-family: var(--lexend-deca-font-family);
+  line-height: 1.8;
+}
+.card-button{
+  border: none;
+  background: var(--light-gray-button-background-heading-color);
+  border-radius: 50px;
+  color: inherit;
+  padding: 1rem;
+  margin: 4rem auto 1rem;
+  width: 150px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.card-button-sedans{
+  color: var(--bright-orange-color);
+}
+.card-button-suvs{
+  color: var(--dark-cyan-color);
+}
+.card-button-luxury{
+  color: var(--very-dark-cyan-color);
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: var(--attribution-color);
+}
